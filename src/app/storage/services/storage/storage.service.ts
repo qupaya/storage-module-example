@@ -40,7 +40,7 @@ export abstract class StorageService implements Storage {
   }
 
   public removeItem(key: string): void {
-    this.api.removeItem(key);
+    this.api.removeItem(this.prefixKey(key));
   }
 
   public clear(): void {
